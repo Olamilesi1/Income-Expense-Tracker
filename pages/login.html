@@ -1,0 +1,59 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="login-div">
+        <h1 id="login-title">Welcome Back,</h1> <br>
+        <p id="login-desc">We're so glad to have you back. Let's get strated with tracking your spending for the week.</p> <br>
+
+        <span class="inputs"><label class="label-input" for="email"> Email: </label>
+            <input type= "email" placeholder="Enter your email" class="input" id="email"></span> 
+    
+    <div class="inputs"><label class="label-input" for="password"> Password: </label>
+    <input type= "password" placeholder="Enter your password" class="input" id="password"></div> <br>
+
+    <button id="continue">Continue</button> <br>
+
+    <p id="login">Don't Have An Account? <a href="../pages/register.html"> Register</a></p>
+    </div> 
+    <script src="../assets/js/login.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div id="login-div">
+        <h1 id="login-title">Welcome Back,</h1> <br>
+        <p id="login-desc">We're so glad to have you back. Let's get started with tracking your spending for the week.</p> 
+
+        <form id="login-form">
+            <div class="inputs">
+                <label class="label-input" for="email"> Email: </label>
+                <input type="email" placeholder="Enter your email" class="input" id="email" required>
+            </div>
+            
+            <div class="inputs">
+                <label class="label-input" for="password"> Password: </label>
+                <input type="password" placeholder="Enter your password" class="input" id="password" required>
+            </div> 
+            <p id="error-message" style="color: red; display: none;">Please fill in all fields.</p>
+            <button type="submit" id="continue">Continue</button>
+        </form>
+        
+        <p id="login">Don't Have An Account? <a href="../pages/register.html"> Register</a></p>
+    </div> 
+    <script src="../assets/js/login.js"></script>
+</body>
+</html>

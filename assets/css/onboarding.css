@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+#main-section{
+    margin: 5rem auto 5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-name: zoomIn;
+}
+
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#logo{
+ width: 20%;
+ /* border: .1rem solid black;  */
+}
+
+#tag-phrases{
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+#get-started-btn{
+border: none;
+color: white;
+border-radius: 1.5rem;
+background-color: rgb(244,147,30);
+padding: 1rem 4.5rem ;
+transition-duration: 0.4s;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#get-started-btn:hover{
+    background-color: #04AA6D;
+    color: black;
+}
