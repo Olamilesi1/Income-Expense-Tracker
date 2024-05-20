@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="main-section">
+        <div id="left-side">
+            <div id="left">
+                <img src="../assets/images/logo.png" alt="" id="logo">
+                <h1 id="logo-title">Trakdip</h1>
+            </div>
+
+            <div id="all-ul">
+                <ul id="ul1">
+                    <a href="../pages/dashboard.html"><li class="li">Home</li></a>
+                    <a href="../pages/transaction.html"><li class="li">Transaction List</li></a>
+                    <a href="../pages/summary.html"><li class="li" id="sumary">Summary</li></a>
+                </ul> <br> <br> <br>
+
+                <ul id="ul2">
+                    <li class="li">Settings</li>
+                    <li class="li">Log Out</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="right-side">
+
+            <div id="right">
+                <h1 id="welcome">Welcome Olamilesi</h1>
+                <p id="welcome-note">Track your expenses, start your day right!</p>
+            </div>
+
+            <h1 id="summary">Summary List</h1> <br>
+
+            <div id="button-list">
+                <button class="butto" id="today-button">Today</button>
+                <button class="butto" id="week-button">This Week</button>
+                <button class="butto" id="month-button">This Month</button>
+                <button class="butto" id="year-button">This Year</button>
+                <button class="butto" id="calender-inpu">Calendar</button>
+            
+                <!-- to create multiple shift + alt arrow down -->
+            </div>
+
+            <div id="used">
+                <input type="date" class="filter-btn" id="calendar-start">
+                <input type="date" class="filter-btn" id="calendar-end">
+            </div>
+
+            <h4 id="today"></h4>
+            <div id="summaryDiv">
+
+            </div>
+            <div id="transaction-list">
+                <!-- Transaction list goes here -->
+             </div>
+
+             <div id="transaction-details">
+                <span class="material-symbols-outlined arrow-lefts">arrow_left_alt</span>
+        <!-- 
+                <h3 id="transaction-details-title">Expense trasaction Details</h3> <br>
+        
+                <h4 id="description-title">Suya and Garri</h4>
+                <h2 id="amount-title">$ 133,000.85</h2> <br>
+        
+                <hr>
+                <br>
+                <p id="transaction-id">Transaction Category</p>
+        
+                <div id="transaction-datevalue">
+                    <p id="transaction-id">Transaction Date</p>
+                    <p id="date-value">Sunday, 5 May 2024</p>
+                </div>
+        
+                <div id="modify">
+                    <button id="edit"><span class="material-symbols-outlined">edit_square</span>Modify Expense</button>
+                    <button id="delete"><span class="material-symbols-outlined">delete</span>Delete</button>
+                </div> -->
+        
+            </div>
+            </div>
+
+            
+          
+            </section>
+            <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

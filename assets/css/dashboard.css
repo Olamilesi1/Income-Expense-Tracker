@@ -78,6 +78,16 @@ body {
     color: rgb(45, 73, 92);
 }
 
+#transact {
+    background-color: white;
+    color: rgb(45, 73, 92);
+}
+
+#sumary {
+    background-color: white;
+    color: rgb(45, 73, 92);
+}
+
 #right-side {
     width: 85%;
     padding: 0rem 0rem 2rem 0;
@@ -378,16 +388,49 @@ box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
 }
 
 #transaction-li {
-    width: 50%;
-    border: .1rem solid black;
+    width: 100%;
+    /* border: .1rem solid black; */
     margin: 1rem auto;
     padding: 1rem;
-    display: none;
+    /* display: none; */
+}
+
+.butto {
+    border: .1rem solid grey;
+    background-color: transparent;
+    width: 15%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    transition-duration: 0.4s;
+}
+
+.butto:hover {
+    background-color: rgb(244, 147, 30);
+    color: black;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#summary{
+    margin: 1rem 0;
 }
 
 #use {
     display: flex;
     justify-content: space-around;
+}
+
+#calendar-inp{
+    width: 20%;
+}
+
+#used {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+    padding: 1rem;
+    gap: 2rem;
+    display: none;
 }
 
 .filter-btn {
@@ -492,4 +535,25 @@ box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
     border: none;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
     width: 40%;
+}
+
+.category-summary {
+    margin-bottom: 1rem;
+}
+
+.category-summary h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0; /* Light gray background for the progress bar container */
+    border-radius: 5px;
+    overflow: hidden; /* Ensures the progress bar doesn't exceed the container */
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: blue; /* Change color as needed */
+    border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
 }
