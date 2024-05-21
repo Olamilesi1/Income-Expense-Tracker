@@ -285,7 +285,7 @@ document.getElementById('year-button').addEventListener('click', function() {
 });
 }
 
-
+//filter transactions
 function filterTransactions(period) {
     const now = new Date();
     let filteredTransactions = expenseContainer.expenseObject;
