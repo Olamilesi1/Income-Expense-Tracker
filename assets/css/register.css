@@ -44,6 +44,20 @@ width: 100%;
     border-radius: .5rem;
 }
 
+#pass-visibility{
+    display: flex;
+    padding: .8rem .5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#password{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 90%;
+}
+
 #continue{
     width: 100%;
 padding: 1rem 0;

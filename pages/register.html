@@ -36,6 +36,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/register.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Register</title>
 </head>
 <body>
@@ -53,10 +54,16 @@
                 <label class="label-input" for="email"> Email: </label>
                 <input type="email" placeholder="Enter your email" class="input" id="email" required>
             </span>
+            <p id="error-email" style="color: red; display: none;">Invalid Email</p>
             
             <div class="inputs">
                 <label class="label-input" for="password"> Password: </label>
-                <input type="password" placeholder="Enter your password" class="input" id="password" required>
+                <span class="input" id="pass-visibility">
+                    <input type="password" placeholder="Enter your password" id="password" required>
+                    <span class="material-symbols-outlined" id="toggle-password">lock</span>
+                </span>
+                <p id="error-password" style="color: red; display: none;">Password must be: at least 8 characters long, one uppercase, one lowercase, one digit, one special charactersss.</p>
+
             </div> <br>
             <p id="error-message" style="color: red; display: none;">Please fill in all fields.</p>
             <button type="submit" id="continue">Continue</button>

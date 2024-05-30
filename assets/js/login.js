@@ -11,9 +11,21 @@ document.querySelector('#login-form').addEventListener('submit', function(event)
     } else {
         document.querySelector('#error-message').style.display = 'none';
     }
+   // Validate email and password
+   const emailError = validateEmail(email);
+   const passwordError = validatePassword(password);
 
-    // Call the login function with email and password
-    login(email, password);
+   // Display error messages
+   document.querySelector("#error-email").textContent = emailError;
+   document.querySelector("#error-email").style.display = emailError ? "block" : "none";
+
+   document.querySelector("#error-password").textContent = passwordError;
+   document.querySelector("#error-password").style.display = passwordError ? "block" : "none";
+
+   // Proceed with registration if there are no errors
+   if (!emailError && !passwordError) {
+      login(email, password);
+   }
 });
 
 
@@ -25,10 +37,6 @@ document.querySelector('#continue').addEventListener('click', function(event) {
     const password = document.querySelector('#password').value;
 
     // Check if email or password is empty
-    // if (email.trim() === '' || password.trim() === '') {
-    //     alert('Please enter both email and password.');
-    //     return; // Exit function early if email or password is empty
-    // }
 
     if ( email.trim() === '' || password.trim() === '') {
         document.querySelector('#error-message').style.display = 'block';
@@ -38,9 +46,64 @@ document.querySelector('#continue').addEventListener('click', function(event) {
     }
 
 
-    // Call the login function with email and password
-    login(email, password);
+     // Validate email and password
+     const emailError = validateEmail(email);
+     const passwordError = validatePassword(password);
+ 
+     // Display error messages
+     document.querySelector("#error-email").textContent = emailError;
+     document.querySelector("#error-email").style.display = emailError ? "block" : "none";
+ 
+     document.querySelector("#error-password").textContent = passwordError;
+     document.querySelector("#error-password").style.display = passwordError ? "block" : "none";
+ 
+     // Proceed with registration if there are no errors
+     if (!emailError && !passwordError) {
+        login(email, password);
+     }
 });
+
+document.querySelector("#toggle-password").addEventListener("click", function () {
+    const passwordField = document.querySelector("#password");
+    const passwordFieldType = passwordField.getAttribute("type");
+
+    if (passwordFieldType === "password") {
+        passwordField.setAttribute("type", "text");
+        this.innerHTML =
+            '<span class="material-symbols-outlined">lock_open</span>'; // Change icon to indicate password is visible
+    } else {
+        passwordField.setAttribute("type", "password");
+        this.innerHTML = '<span class="material-symbols-outlined">lock</span>'; // Change icon to indicate password is hidden
+    }
+});
+
+function validateEmail(email) {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let errorMessage = "";
+
+    if (!emailRegex.test(email) || email.length > 254) {
+        errorMessage += document.getElementById('error-email').textContent
+    }
+
+    return errorMessage.trim();
+}
+
+function validatePassword(password) {
+    let errorMessage = '';
+
+    if (
+        password.length < 8 ||
+        password.length > 128 ||
+        !/[A-Z]/.test(password) ||
+        !/[a-z]/.test(password) ||
+        !/[0-9]/.test(password) ||
+        !/[!@#$%^&*]/.test(password)
+    ) {
+        errorMessage += document.getElementById('error-password').textContent;
+    }
+
+    return errorMessage.trim();
+}
 
 function login(email, password) {
     // Retrieve existing users from localStorage

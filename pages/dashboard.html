@@ -29,8 +29,46 @@
                 </ul> <br> <br> <br>
 
                 <ul id="ul2">
-                    <li class="li">Settings</li>
-                    <li class="li">Log Out</li>
+                    <li class="li" id="setting">Settings</li>
+                    <div id="settings">
+                        <div id="theme">
+                            <p>Theme: </p> 
+                            <select name="" id="dark-light">
+                                <option  value="dark" id="dark">Dark</option>
+                                <option  value="light" id="light">Light</option>
+                            </select>
+                        </div>
+        
+                        <br>
+                        
+                        <div id="currencies">
+                            <p>Currency:</p>
+                            <select name="" id="currency-selector">
+                                <option class="current" value="dollars">$</option>
+                                <option class="current" value="naira">#</option>
+                                <option class="current" value="pounds">£</option>
+                                <option class="current" value="GBP">€</option>
+                                <option class="current" value="AUD">AUD</option>
+                                <option class="current" value="">CAD</option>
+                            <option class="current" value="JPY">JPY</option>
+                            <option class="current" value="CNY">CNY</option>
+                            <option class="current" value="INR">INR</option>
+                            <option class="current" value="KES">KES</option>
+                            <option class="current" value="ZAR">ZAR</option>
+                            <option class="current" value="BRL">BRL</option>
+                            <option class="current" value="RUB">RUB</option>
+                            <option class="current" value="TRY">TRY</option>
+                            <option class="current" value="MXN">MXN</option>
+                            <option class="current" value="NZD">NZD</option>
+                            <option class="current" value="SGD">SGD</option>
+                            <option class="current" value="CHF">CHF</option>
+                            <option class="current" value="SEK">SEK</option>
+                            <option class="current" value="DKK">DKK</option>
+                        </select>
+                    </div>
+                    </div>
+
+                    <li class="li"> <a href="../pages/login.html">Log Out</a></li>
                 </ul>
             </div>
         </div>
@@ -41,6 +79,7 @@
                 <h1 id="welcome">Welcome Olamilesi</h1>
                 <p id="welcome-note">Track your expenses, start your day right!</p>
             </div>
+<br><br><br><br><br>
 
             <h1 id="dashboard">Dashboard</h1>
 
@@ -55,10 +94,10 @@
             <div id="dashboard-div">
                 
                 <div id="money">
-                    <div class="amount" id="total-income">Total Income: $<span id="amt">0</span></div>
+                    <div class="amount" id="total-income">Total Income: <span id="currency">$</span><span id="amt">0</span></div>
                     <div id="income-expenses">
-                    <div class="amount" id="total-expense">Spent So Far: $<span id="epens">0</span></div>
-                    <div class="amount" id="balance">Remaining Balance: $<span id="balanc">0</span></div>
+                    <div class="amount" id="total-expense">Spent So Far: <span id="currency">$</span><span id="epens">0</span></div>
+                    <div class="amount" id="balance">Remaining Balance: <span id="currency">$</span><span id="balanc">0</span></div>
                 </div>
                 </div>
 
@@ -83,7 +122,7 @@
                     <h2>Add new income</h2>
                     <p>Enter the details of your income to help you track your spending</p>
             
-                    <label for="date" class="input-desc">Enter Amount</label>
+                    <label for="date" class="input-desc">Enter Date</label>
                     <input type="date" id="income-date" class="inputs">
             
                     <label for="amount" class="input-desc">Enter Amount</label>
@@ -111,7 +150,7 @@
             
                     <label for="date" class="input-desc">Date</label>
                     <input type="date" id="date" class="inputs">
-
+                    <input type="hidden" id="index">
                     <input type="hidden" id="time">
             
                     <button id="submit-expense">Add expense</button>
@@ -207,34 +246,54 @@
                 <!-- Transaction list goes here -->
              </div>
 
+             <!-- <div id="settings">
+                <div id="theme">
+                    <p>Theme: </p> 
+                    <select name="" id="dark-light">
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+                    </select>
+                </div>
+
+                <br>
+                
+                <div id="currencies">
+                    <p>Currency:</p>
+                    <select name="" id="currency-value">
+                        <option value="dollars">$</option>
+                        <option value="naira">#</option>
+                        <option value="pounds">£</option>
+                        <option value="GBP">€</option>
+                        <option value="AUD">AUD</option>
+                        <option value="">CAD</option>
+                    <option value="JPY">JPY</option>
+                    <option value="CNY">CNY</option>
+                    <option value="INR">INR</option>
+                    <option value="KES">KES</option>
+                    <option value="ZAR">ZAR</option>
+                    <option value="BRL">BRL</option>
+                    <option value="RUB">RUB</option>
+                    <option value="TRY">TRY</option>
+                    <option value="MXN">MXN</option>
+                    <option value="NZD">NZD</option>
+                    <option value="SGD">SGD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="SEK">SEK</option>
+                    <option value="DKK">DKK</option>
+                </select>
+            </div>
+            </div> -->
+
         </div>
 
     </section>
 
-
+    
     <div id="transaction-details">
-        <span class="material-symbols-outlined arrow-lefts">arrow_left_alt</span>
-<!-- 
-        <h3 id="transaction-details-title">Expense trasaction Details</h3> <br>
-
-        <h4 id="description-title">Suya and Garri</h4>
-        <h2 id="amount-title">$ 133,000.85</h2> <br>
-
-        <hr>
-        <br>
-        <p id="transaction-id">Transaction Category</p>
-
-        <div id="transaction-datevalue">
-            <p id="transaction-id">Transaction Date</p>
-            <p id="date-value">Sunday, 5 May 2024</p>
-        </div>
-
-        <div id="modify">
-            <button id="edit"><span class="material-symbols-outlined">edit_square</span>Modify Expense</button>
-            <button id="delete"><span class="material-symbols-outlined">delete</span>Delete</button>
-        </div> -->
-
+        <!-- <span class="material-symbols-outlined arrow-lefts">arrow_left_alt</span> -->
+        <!-- <button class="arrow-lefts">yes</button> -->
     </div>
+
     <!-- <script src="../assets/js/dashboard.js"></script> -->
     <script src="../assets/js/dashboard.js"></script>
 </body>
