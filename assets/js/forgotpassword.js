@@ -56,7 +56,7 @@ function validatePassword(password) {
 
 function forgotPassword(email, newPassword) {
     // Check if the email exists in the local storage
-    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+    // const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
     const user = existingUsers.find(function(user) {
         return user.email === email;
     });
@@ -66,7 +66,7 @@ function forgotPassword(email, newPassword) {
         user.password = newPassword;
 
         // Save the updated user list to local storage
-        localStorage.setItem('users', JSON.stringify(existingUsers));
+        // localStorage.setItem('users', JSON.stringify(existingUsers));
 
         // Display success message or redirect to login page
         // alert('Password reset successfully.');

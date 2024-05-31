@@ -83,7 +83,7 @@ function validatePassword(password) {
 
 function register(username, email, password) {
     // Retrieve existing users from localStorage
-    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+    // const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
 
     // Check if user already exists with the same email
     const userExists = existingUsers.some(function (user) {
@@ -102,10 +102,10 @@ function register(username, email, password) {
         });
 
         // Save updated user list to localStorage
-        localStorage.setItem("users", JSON.stringify(existingUsers));
+        // localStorage.setItem("users", JSON.stringify(existingUsers));
 
         // Save username to localStorage
-        localStorage.setItem("username", username);
+        // localStorage.setItem("username", username);
 
         // Redirect to the next page
         window.location.href = "/pages/dashboard.html";
