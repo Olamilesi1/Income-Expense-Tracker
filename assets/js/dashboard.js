@@ -43,7 +43,7 @@ let currency = document.querySelectorAll('#currency')
 
 // Function To Display Welcome Message
 
-const username = localStorage.getItem("username"); // Retrieve username from localStorage
+// const username = localStorage.getItem("username"); // Retrieve username from localStorage
 
 const welcomeMessage = document.querySelector("#welcome");
 welcomeMessage.textContent = `Welcome ${username}!`; // Display welcome message
@@ -53,34 +53,34 @@ welcomeMessage.textContent = `Welcome ${username}!`; // Display welcome message
 
 document.addEventListener("DOMContentLoaded", function () {
     if (amt !== null) {
-        let getIncome = localStorage.getItem("incomeAmount"); //Retrieve income total inside the incomeAmount key
+        // let getIncome = localStorage.getItem("incomeAmount"); //Retrieve income total inside the incomeAmount key
         if (getIncome !== null) {
             amt.textContent = getIncome; //displays new income
         }
     }
 
     if (epens !== null) {
-        let getExpense = localStorage.getItem("expenseAmount");
+        // let getExpense = localStorage.getItem("expenseAmount");
         if (getExpense !== null) {
             epens.textContent = getExpense;
         }
     }
 
     if (balanc !== null) {
-        let getBalance = localStorage.getItem("balanceAmount");
+        // let getBalance = localStorage.getItem("balanceAmount");
         if (getBalance !== null) {
             balanc.textContent = getBalance;
         }
     }
 
-    let getExpenseContainer = localStorage.getItem("expenseContainer");
+    // let getExpenseContainer = localStorage.getItem("expenseContainer");
     if (getExpenseContainer !== null) { // null is so it doesn't throw error if there is nothing inside
         expenseContainer = JSON.parse(getExpenseContainer);
         transactionUpdate();
     }
 
     if (currency !== null) {
-    let getCurrencyValue = localStorage.getItem('currencyValue');
+    // let getCurrencyValue = localStorage.getItem('currencyValue');
     if (getCurrencyValue !== null) { 
         currency.forEach(currencyPair => {
             currencyPair.textContent = getCurrencyValue
@@ -176,11 +176,11 @@ let incomeArray = [];
 if (submitIncome !== null) {
     submitIncome.addEventListener("click", function () {
         let total = parseInt(amt.textContent, 10) + parseInt(incomeAmount.value, 10);
-        localStorage.setItem("incomeAmount", total);
+        // localStorage.setItem("incomeAmount", total);
 
         amt.textContent = `${total}`;
         balanc.textContent = `${total - parseInt(epens.textContent, 10)}`;
-        localStorage.setItem("balanceAmount", balanc.textContent);
+        // localStorage.setItem("balanceAmount", balanc.textContent);
 
         let incomeObject = {
             amount: incomeAmount.value,
@@ -188,7 +188,7 @@ if (submitIncome !== null) {
         };
 
         incomeArray.push(incomeObject);
-        localStorage.setItem("incomeArray", JSON.stringify(incomeArray));
+        // localStorage.setItem("incomeArray", JSON.stringify(incomeArray));
     });
 }
 
@@ -197,12 +197,12 @@ let expenseContainer = []
 if (submitExpense !== null) {
     submitExpense.addEventListener("click", function () {
         let total = parseInt(epens.textContent, 10) + parseInt(expenseAmount.value, 10);
-        localStorage.setItem("expenseAmount", total);
+        // localStorage.setItem("expenseAmount", total);
 
         epens.textContent = `${total}`;
 
         balanc.textContent = `${parseInt(amt.textContent, 10) - parseInt(epens.textContent, 10)}`;
-        localStorage.setItem("balanceAmount", balanc.textContent);
+        // localStorage.setItem("balanceAmount", balanc.textContent);
 
         let expenseObject = {
             id: Date.now(), // unique identifier for each expense
@@ -214,7 +214,7 @@ if (submitExpense !== null) {
         };
 
         expenseContainer.push(expenseObject);
-        localStorage.setItem("expenseContainer", JSON.stringify(expenseContainer));
+        // localStorage.setItem("expenseContainer", JSON.stringify(expenseContainer));
 
         transactionList.innerHTML = "";
         transactionDetails.innerHTML = "";
@@ -306,15 +306,15 @@ arrowLeftsButton.addEventListener('click', function() {
                 const confirmDelete = confirm("Do you want to delete this expense?");
                 if (confirmDelete) {
                     expenseContainer = expenseContainer.filter(exp => exp.id !== obj.id);
-                    localStorage.setItem("expenseContainer", JSON.stringify(expenseContainer));
+                    // localStorage.setItem("expenseContainer", JSON.stringify(expenseContainer));
 
                     // Update total expense and balance
                     const newTotalExpense = expenseContainer.reduce((acc, curr) => acc + parseInt(curr.amount), 0);
                     epens.textContent = newTotalExpense;
-                    localStorage.setItem("expenseAmount", newTotalExpense);
+                    // localStorage.setItem("expenseAmount", newTotalExpense);
 
                     balanc.textContent = parseInt(amt.textContent, 10) - newTotalExpense;
-                    localStorage.setItem("balanceAmount", balanc.textContent);
+                    // localStorage.setItem("balanceAmount", balanc.textContent);
 
                     transactionList.innerHTML = "";
                     transactionDetails.innerHTML = "";
@@ -332,14 +332,14 @@ arrowLeftsButton.addEventListener('click', function() {
 
         transactionList.appendChild(li);
     });
-    localStorage.setItem("li", transactionList.outerHTML); // Store the updated HTML in localStorage
+    // localStorage.setItem("li", transactionList.outerHTML); // Store the updated HTML in localStorage
 }
 
 //filter transactions
 function filterTransactions(period) {
     const now = new Date();
     let filteredTransactions = expenseContainer.expenseObject;
-    let getIncomeArray = localStorage.getItem("incomeArray");
+    // let getIncomeArray = localStorage.getItem("incomeArray");
     let incomeTransactions = JSON.parse(getIncomeArray);
   
     let dateRangeText = "";
@@ -507,12 +507,12 @@ function handleEditExpense(id) {
     expenseContainer = expenseContainer.filter((item) => item.id !== id);
 
     let total = parseInt(epens.textContent, 10) - parseInt(expense.amount, 10);
-    localStorage.setItem("expenseAmount", total);
+    // localStorage.setItem("expenseAmount", total);
 
     epens.textContent = `${total}`;
 
     balanc.textContent = `${parseInt(expense.amount, 10) + parseInt(balanc.textContent, 10)}`;
-    localStorage.setItem("balanceAmount", balanc.textContent);
+    // localStorage.setItem("balanceAmount", balanc.textContent);
 
 
     // Show the expense form and hide other sections
@@ -532,7 +532,7 @@ function handleEditExpense(id) {
 
 
         // Update the local storage
-        localStorage.setItem("expenseContainer", JSON.stringify(expenseContainer));
+        // localStorage.setItem("expenseContainer", JSON.stringify(expenseContainer));
 
         // Refresh the UI
         transactionList.innerHTML = "";
@@ -568,12 +568,12 @@ function handleEditExpense(id) {
 
 function submitNewExpense() {
     let total = parseInt(epens.textContent, 10) + parseInt(expenseAmount.value, 10);
-    localStorage.setItem("expenseAmount", total);
+    // localStorage.setItem("expenseAmount", total);
 
     epens.textContent = `${total}`;
 
     balanc.textContent = `${parseInt(amt.textContent, 10) - parseInt(epens.textContent, 10)}`;
-    localStorage.setItem("balanceAmount", balanc.textContent);
+    // localStorage.setItem("balanceAmount", balanc.textContent);
 
     let expenseObject = {
         id: Date.now(), // unique identifier for each expense
@@ -585,7 +585,7 @@ function submitNewExpense() {
     };
 
     expenseContainer.push(expenseObject);
-    localStorage.setItem("expenseContainer", JSON.stringify(expenseContainer));
+    // localStorage.setItem("expenseContainer", JSON.stringify(expenseContainer));
 
     transactionList.innerHTML = "";
     transactionDetails.innerHTML = "";
@@ -751,6 +751,6 @@ currencySelector.addEventListener('change', function () {
         currencyPair.textContent = currencySelector.value
      } )
 
-     localStorage.setItem('currencyValue', currencySelector.value)
+    //  localStorage.setItem('currencyValue', currencySelector.value)
 })
 
