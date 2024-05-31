@@ -9,20 +9,20 @@
     display: flex;
     flex-direction: column;
     align-items: center; 
-    /* animation-duration: 3s;
+    animation-duration: 3s;
     animation-timing-function: ease-in-out;
-    animation-name: zoomIn; */
+    animation-name: zoomIn;
 }
 
 
-/* @keyframes zoomIn {
+@keyframes zoomIn {
     from {
         transform: scale(0);
     }
     to {
         transform: scale(1);
     }
-} */
+}
 
 #logo{
  width: 20%;

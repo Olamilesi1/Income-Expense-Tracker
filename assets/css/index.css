@@ -15,19 +15,19 @@ body {
     align-items: center;
     width: 50%;
     margin: 4rem auto;
-    /* animation-duration: 3s;
+    animation-duration: 3s;
     animation-timing-function: ease-in-out;
-    animation-name: zoomOut; */
+    animation-name: zoomOut;
 }
 
-/* @keyframes zoomOut {
+@keyframes zoomOut {
     from {
         transform: scale(1);
     }
     to {
         transform: scale(0);
     }
-} */
+}
 
 #logo {
     width: 40%;
