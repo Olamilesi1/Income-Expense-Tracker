@@ -746,17 +746,6 @@ selectElement.addEventListener('click', function() {
 });
 
 
-
-// if(currencySelector !== null) {
-//     currencySelector.forEach(currencyPair => {
-//         currencyPair.addEventListener('change', function() {
-//         currency.textContent = currencySelector.value
-//         console.log(currency.textContent)
-//         localStorage.setItem('currencyValue', currencySelector.value)
-//     } )     
-// }) 
-// };
-
 currencySelector.addEventListener('change', function () {
     currency.forEach(currencyPair => {
         currencyPair.textContent = currencySelector.value
@@ -765,13 +754,3 @@ currencySelector.addEventListener('change', function () {
      localStorage.setItem('currencyValue', currencySelector.value)
 })
 
-
-
-
-// categoryDiv.forEach((category) => {
-//     category.addEventListener("click", function () {
-//         categoryValue.innerHTML = category.textContent;
-//         // console.log(category.textContent);
-//         categoryValue.style.display = "block";
-//     });
-// });
