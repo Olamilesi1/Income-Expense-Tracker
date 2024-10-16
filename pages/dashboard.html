@@ -2,262 +2,319 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/dashboard.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>Document</title>
 </head>
 
 <body>
 
+  <!-- body section  -->
+  <section id="main-section">
+    <div id="left-side">
+      <div id="left">
+        <a href="../pages/dashboard.html" id="logoo"><img src="../assets/images/logo.png" alt="" id="logo" /></a>
+        <h1 id="logo-title">Trakdip</h1>
+      </div>
 
-    <section id="main-section">
+      <div id="all-ul">
+        <ul id="ul1">
+          <a href="../pages/dashboard.html" class="hul">
+            <li class="li" id="home">Home</li>
+          </a>
+          <a href="../pages/transaction.html" class="hul">
+            <li class="li">Transaction List</li>
+          </a>
+          <a href="../pages/summary.html" class="hul">
+            <li class="li">Summary</li>
+          </a>
+        </ul>
 
-        <div id="left-side">
-            <div id="left">
-                <img src="../assets/images/logo.png" alt="" id="logo">
-                <h1 id="logo-title">Trakdip</h1>
+        <br />
+        <br />
+        <br />
+
+        <ul id="ul2">
+          <li class="li" id="setting">Settings</li>
+          <div id="settings">
+            <span class="material-symbols-outlined arrow-setting">arrow_back</span>
+            <div id="theme">
+              <select name="" id="dark-light">
+                <option value="dark" id="dark">Dark</option>
+                <option value="light" id="light">Light</option>
+              </select>
             </div>
 
-            <div id="all-ul">
-                <ul id="ul1">
-                    <a href="../pages/dashboard.html" class="hul"><li class="li" id="home">Home</li></a>
-                    <a href="../pages/transaction.html" class="hul"><li class="li">Transaction List</li></a>
-                    <a href="../pages/summary.html" class="hul"><li class="li">Summary</li></a>
-                </ul> <br> <br> <br>
+            <br />
 
-                <ul id="ul2">
-                    <li class="li" id="setting">Settings</li>
-                    <div id="settings">
-                        <div id="theme">
-                            <p>Theme: </p> 
-                            <select name="" id="dark-light">
-                                <option  value="dark" id="dark">Dark</option>
-                                <option  value="light" id="light">Light</option>
-                            </select>
-                        </div>
-        
-                        <br>
-                        
-                        <div id="currencies">
-                            <p>Currency:</p>
-                            <select name="" id="currency-selector">
-                                <option class="current" value="dollars">$</option>
-                                <option class="current" value="naira">#</option>
-                                <option class="current" value="pounds">£</option>
-                                <option class="current" value="GBP">€</option>
-                                <option class="current" value="AUD">AUD</option>
-                                <option class="current" value="">CAD</option>
-                            <option class="current" value="JPY">JPY</option>
-                            <option class="current" value="CNY">CNY</option>
-                            <option class="current" value="INR">INR</option>
-                            <option class="current" value="KES">KES</option>
-                            <option class="current" value="ZAR">ZAR</option>
-                            <option class="current" value="BRL">BRL</option>
-                            <option class="current" value="RUB">RUB</option>
-                            <option class="current" value="TRY">TRY</option>
-                            <option class="current" value="MXN">MXN</option>
-                            <option class="current" value="NZD">NZD</option>
-                            <option class="current" value="SGD">SGD</option>
-                            <option class="current" value="CHF">CHF</option>
-                            <option class="current" value="SEK">SEK</option>
-                            <option class="current" value="DKK">DKK</option>
-                        </select>
-                    </div>
-                    </div>
-
-                    <li class="li"> <a href="../pages/login.html">Log Out</a></li>
-                </ul>
+            <div id="currencies">
+              <select name="" id="currency-selector">
+                <option class="current" value="$">$</option>
+                <option class="current" value="#">#</option>
+                <option class="current" value="£">£</option>
+                <option class="current" value="€">€</option>
+                <option class="current" value="A$">AUD</option>
+                <option class="current" value="C$">CAD</option>
+                <option class="current" value="¥">JPY</option>
+                <option class="current" value="¥">CNY</option>
+                <option class="current" value="₹">INR</option>
+                <option class="current" value="KSh">KES</option>
+                <option class="current" value="R">ZAR</option>
+                <option class="current" value="R$">BRL</option>
+                <option class="current" value="₽">RUB</option>
+                <option class="current" value="₺">TRY</option>
+                <option class="current" value="$">MXN</option>
+                <option class="current" value="NZ$">NZD</option>
+                <option class="current" value="S$">SGD</option>
+                <option class="current" value="CHF">CHF</option>
+                <option class="current" value="SEK">SEK</option>
+                <option class="current" value="DKK">DKK</option>
+              </select>
             </div>
-        </div>
+          </div>
 
-        <div id="right-side">
-
-            <div id="right">
-                <h1 id="welcome">Welcome Olamilesi</h1>
-                <p id="welcome-note">Track your expenses, start your day right!</p>
-            </div>
-<br><br><br><br><br>
-
-            <h1 id="dashboard">Dashboard</h1>
-
-            <div id="button-list">
-                <button class="button" id="today-button">Today</button>
-                <button class="button" id="week-button">This Week</button>
-                <button class="button" id="month-button">This Month</button>
-                <button class="button" id="transaction-list-button"><a href="../pages/transaction.html" class="hull">Trasaction List</a></button>
-                <!-- to create multiple shift + alt arrow down -->
-            </div>
-
-            <div id="dashboard-div">
-                
-                <div id="money">
-                    <div class="amount" id="total-income">Total Income: <span id="currency">$</span><span id="amt">0</span></div>
-                    <div id="income-expenses">
-                    <div class="amount" id="total-expense">Spent So Far: <span id="currency">$</span><span id="epens">0</span></div>
-                    <div class="amount" id="balance">Remaining Balance: <span id="currency">$</span><span id="balanc">0</span></div>
-                </div>
-                </div>
-
-                <div id="add-transaction">
-                
-                <div id="add-div">
-                <h3>Add</h3>
-                <img src="../assets/images/add-btn.png" alt="" id="add-button">
-                <!-- <button id="add-button">Add</button> -->
-                </div>
-                
-                <div id="choose-type">
-                    <h2>Type</h2> <br>
-                    <button class="new" id="add-income-button">Add Income</button>
-                    <button class="new" id="add-expense-button">Add Expense</button>
-        
-                </div>
-
-                <div id="add-income">
-                    <!-- class="hidden" -->
-                    <span class="material-symbols-outlined close">close</span>
-                    <h2>Add new income</h2>
-                    <p>Enter the details of your income to help you track your spending</p>
-            
-                    <label for="date" class="input-desc">Enter Date</label>
-                    <input type="date" id="income-date" class="inputs">
-            
-                    <label for="amount" class="input-desc">Enter Amount</label>
-                    <input type="number" id="income-amount" class="inputs" required>
-            
-                    <button id="submit-income">Submit Income</button>
-                </div>
-
-                <div id="add-expense">
-                    <span class="material-symbols-outlined closed">close</span>
-                    <h2>Add new expense</h2>
-                    <p>Enter the details of your expense to help you track your spending</p> <br>
-            
-                    <label for="amount" class="input-desc">Enter Amount</label>
-                    <input type="number" id="expense-amount" class="inputs">
-            
-                    <label for="description" class="input-desc">Description</label>
-                    <input type="text" id="description" class="inputs">
-            
-                    <div id="category-title">
-                    <label for="category" class="input-desc" >Category</label>
-                    <span class="material-symbols-outlined category-arrow">arrow_drop_down</span> 
-                    </div>
-                    <div id="category-value"></div>
-            
-                    <label for="date" class="input-desc">Date</label>
-                    <input type="date" id="date" class="inputs">
-                    <input type="hidden" id="index">
-                    <input type="hidden" id="time">
-            
-                    <button id="submit-expense">Add expense</button>
-                </div>
-
-                <div id="category-container">
-                    <span class="material-symbols-outlined arrow-left">arrow_left_alt</span>
-              
-                  <h2 id="select-category">Select Category</h2>
-                    <p>Select a category that best describes what you spent your money on</p>
-            
-                    <div id="categories">
-                        <div class="category-list">
-                            <div class="left">
-                                <p class="category-divs">👨‍👩‍👧‍👦 Family</p>
-                            </div>
-            
-                            <div class="right">
-                                <p class="category-divs">💊 Healthcare</p>
-                            </div>
-                        </div>
-            
-                        <div class="category-list">
-                            <div class="left">
-                                <p class="category-divs">⛽ Fuel</p>
-                            </div>
-            
-                            <div class="right">
-                                <p class="category-divs">📱 Phone/Internet</p>
-                            </div>
-                        </div>
-            
-                        <div class="category-list">
-                            <div class="left">
-                                <p class="category-divs">📖 Education</p>
-                            </div>
-            
-                            <div class="right">
-                                <p class="category-divs">🎭 Entertainment</p>
-                            </div>
-                        </div>
-            
-                        <div class="category-list">
-                            <div class="left">
-                                <p class="category-divs">🛍 Shopping</p>
-                            </div>
-            
-                            <div class="right">
-                                <p class="category-divs">✈ Travel</p>
-                            </div>
-                        </div>
-            
-                        <div class="category-list">
-                            <div class="left">
-                                <p class="category-divs">🎉 Socializing</p>
-                            </div>
-            
-                            <div class="right">
-                                <p class="category-divs">🏧 Withdrawal</p>
-                            </div>
-                        </div>
-            
-                        <div class="category-list">
-                            <div class="left">
-                                <p class="category-divs">↗ Transfer</p>
-                            </div>
-            
-                            <div class="right">
-                                <p class="category-divs">🚌 Transportation</p>
-                            </div>
-                        </div>
-            
-                        <div class="category-list">
-                            <div class="left">
-                                <p class="category-divs">🏠 Housing</p>
-                            </div>
-            
-                            <div class="right">
-                                <p class="category-divs">🎁 Micellaneous</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                </div>
-
-             </div>
-
-             <h2 id="transaction-title">Transaction List</h2> <br>
-             <h4 id="today"></h4>
-    
-             <div id="transaction-list">
-                <!-- Transaction list goes here -->
-             </div>
-
-        </div>
-
-    </section>
-
-    
-    <div id="transaction-details">
-        <!-- <span class="material-symbols-outlined arrow-lefts">arrow_left_alt</span> -->
-        <!-- <button class="arrow-lefts">yes</button> -->
+          <li class="li" id="log">
+            <a href="../pages/login.html" class="log">Log Out</a>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <!-- <script src="../assets/js/dashboard.js"></script> -->
-    <script src="../assets/js/dashboard.js"></script>
+    <div id="right-side">
+
+      <div id="right">
+
+        <h1 id="welcome">Welcome Olamilesi</h1>
+        <p id="welcome-note">Track your expenses, start your day right!</p>
+      </div>
+
+      <br /><br /><br /><br /><br />
+
+      <h1 id="dashboard">Dashboard</h1>
+
+      <div id="button-list">
+        <button class="button" id="today-button">Today</button>
+        <button class="button" id="week-button">This Week</button>
+        <button class="button" id="month-button">This Month</button>
+        <button class="button" id="transaction-list-button">
+          <a href="../pages/transaction.html" class="hull">Trasaction List</a>
+        </button>
+
+        <!-- to create multiple shift + alt arrow down -->
+      </div>
+
+      <div id="dashboard-div">
+
+        <div id="money">
+          <div class="amount" id="total-income">
+            Total Income: <span id="currency">$</span><span id="amt">0</span>
+          </div>
+
+          <div id="income-expenses">
+            <div class="amount" id="total-expense">
+              Spent So Far: <span id="currency">$</span><span id="epens">0</span>
+            </div>
+
+            <div class="amount" id="balance">
+              Remaining Balance: <span id="currency">$</span><span id="balanc">0</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="add-transaction">
+          <div id="add-div">
+            <h3>Add</h3>
+            <img src="../assets/images/add-btn.png" alt="" id="add-button" />
+            <!-- <button id="add-button">Add</button> -->
+          </div>
+
+          <div id="choose-type">
+            <h2>Type</h2>
+            <br />
+            <button class="new" id="add-income-button">Add Income</button>
+            <button class="new" id="add-expense-button">Add Expense</button>
+          </div>
+
+          <div id="add-income">
+            <!-- class="hidden" -->
+            <span class="material-symbols-outlined close">close</span>
+            <h2 id="ad-inc">Add new income</h2>
+            <p id="p-inc">
+              Enter the details of your income to help you track your spending
+            </p>
+
+            <label for="date" class="input-desc">Enter Date</label>
+            <input type="date" id="income-date" class="inputs" />
+
+            <label for="amount" class="input-desc">Enter Amount</label>
+            <input type="number" id="income-amount" class="inputs" required />
+
+            <button id="submit-income">Submit Income</button>
+          </div>
+
+          <div id="add-expense">
+            <span class="material-symbols-outlined closed">close</span>
+            <h2 id="ad-exp">Add new expense</h2>
+            <p id="p-exp">
+              Enter the details of your expense to help you track your
+              spending
+            </p>
+            <br />
+
+            <label for="amount" class="input-desc">Enter Amount</label>
+            <input type="number" id="expense-amount" class="inputs" />
+
+            <label for="description" class="input-desc">Description</label>
+            <input type="text" id="description" class="inputs" />
+
+            <div id="category-title">
+              <label for="category" class="category-label">Category</label>
+              <span class="material-symbols-outlined category-arrow">arrow_drop_down</span>
+            </div>
+
+            <div id="category-value"></div>
+
+            <label for="date" class="date-label">Date</label>
+            <input type="date" id="date" class="inputs" />
+            <input type="hidden" id="index" />
+            <input type="hidden" id="time" />
+
+            <button id="submit-expense">Add expense</button>
+          </div>
+
+          <div id="category-container">
+            <span class="material-symbols-outlined arrow-left">arrow_left_alt</span>
+
+            <h2 id="select-category">Select Category</h2>
+            <p id="p-category">
+              Select a category that best describes what you spent your money
+              on
+            </p>
+
+            <div id="categories">
+              <div class="category-list">
+                <div class="left">
+                  <p class="category-divs">
+                    👨‍👩‍👧‍👦 <br />
+                    Family
+                  </p>
+                </div>
+
+                <div class="right">
+                  <p class="category-divs">💊 Healthcare</p>
+                </div>
+              </div>
+
+              <div class="category-list">
+                <div class="left">
+                  <p class="category-divs">
+                    ⛽ <br />
+                    Fuel
+                  </p>
+                </div>
+
+                <div class="right">
+                  <p class="category-divs">📱 Phone/Internet</p>
+                </div>
+              </div>
+
+              <div class="category-list">
+                <div class="left">
+                  <p class="category-divs">
+                    📖 <br />
+                    Education
+                  </p>
+                </div>
+
+                <div class="right">
+                  <p class="category-divs">
+                    🥗 <br />
+                    Food
+                  </p>
+                </div>
+              </div>
+
+              <div class="category-list">
+                <div class="left">
+                  <p class="category-divs">
+                    🛍 <br />
+                    Shopping
+                  </p>
+                </div>
+
+                <div class="right">
+                  <p class="category-divs">
+                    ✈ <br />
+                    Travel
+                  </p>
+                </div>
+              </div>
+
+              <div class="category-list">
+                <div class="left">
+                  <p class="category-divs">🎭 Entertainment</p>
+                </div>
+
+                <div class="right">
+                  <p class="category-divs">
+                    🏧 <br />
+                    Withdrawal
+                  </p>
+                </div>
+              </div>
+
+              <div class="category-list">
+                <div class="left">
+                  <p class="category-divs">
+                    ↗ <br />
+                    Transfer
+                  </p>
+                </div>
+
+                <div class="right">
+                  <p class="category-divs">🚌 Transportation</p>
+                </div>
+              </div>
+
+              <div class="category-list">
+                <div class="left">
+                  <p class="category-divs">
+                    🏠 <br />
+                    Housing
+                  </p>
+                </div>
+
+                <div class="right">
+                  <p class="category-divs">🎁 Micellaneous</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <h2 id="transaction-title">Transaction List</h2>
+      <br />
+      <h4 id="today"></h4>
+
+      <div id="transaction-list">
+        <!-- Transaction list goes here -->
+      </div>
+
+      <div id="transaction-details">
+        <!-- <span class="material-symbols-outlined arrow-lefts">arrow_left_alt</span> -->
+        <!-- <button class="arrow-lefts">yes</button> -->
+      </div>
+    </div>
+  </section>
+
+  <script src="../assets/js/dashboard.js"></script>
 </body>
 
 </html>

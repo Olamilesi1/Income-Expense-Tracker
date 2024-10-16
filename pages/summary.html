@@ -1,74 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/dashboard.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <title>Document</title>
 </head>
+
 <body>
-    <section id="main-section">
-        <div id="left-side">
-            <div id="left">
-                <img src="../assets/images/logo.png" alt="" id="logo">
-                <h1 id="logo-title">Trakdip</h1>
+  <section id="main-section">
+    <div id="left-side">
+      <div id="left">
+        <a href="../pages/dashboard.html" id="logoo"><img src="../assets/images/logo.png" alt="" id="logo" /></a>
+        <h1 id="logo-title">Trakdip</h1>
+      </div>
+
+      <div id="all-ul">
+        <ul id="ul1">
+          <a href="../pages/dashboard.html" class="hul">
+            <li class="li">Home</li>
+          </a>
+          <a href="../pages/transaction.html" class="hul">
+            <li class="li">Transaction List</li>
+          </a>
+          <a href="../pages/summary.html" class="hul">
+            <li class="li" id="sumary">Summary</li>
+          </a>
+        </ul> <br> <br> <br>
+
+        <ul id="ul2">
+          <li class="li" id="setting">Settings</li>
+          <div id="settings">
+            <span class="material-symbols-outlined arrow-setting">arrow_back</span>
+            <div id="theme">
+              <select name="" id="dark-light">
+                <option value="dark" id="dark">Dark</option>
+                <option value="light" id="light">Light</option>
+              </select>
             </div>
 
-            <div id="all-ul">
-                <ul id="ul1">
-                    <a href="../pages/dashboard.html" class="hul"><li class="li">Home</li></a>
-                    <a href="../pages/transaction.html" class="hul"><li class="li">Transaction List</li></a>
-                    <a href="../pages/summary.html" class="hul"><li class="li" id="sumary">Summary</li></a>
-                </ul> <br> <br> <br>
+            <br />
 
-                <ul id="ul2">
-                    <li class="li">Settings</li>
-                    <li class="li"> <a href="../pages/login.html"></a>Log Out</li>
-                </ul>
+            <div id="currencies">
+              <select name="" id="currency-selector">
+                <option class="current" value="$">$</option>
+                <option class="current" value="#">#</option>
+                <option class="current" value="£">£</option>
+                <option class="current" value="€">€</option>
+                <option class="current" value="A$">AUD</option>
+                <option class="current" value="C$">CAD</option>
+                <option class="current" value="¥">JPY</option>
+                <option class="current" value="¥">CNY</option>
+                <option class="current" value="₹">INR</option>
+                <option class="current" value="KSh">KES</option>
+                <option class="current" value="R">ZAR</option>
+                <option class="current" value="R$">BRL</option>
+                <option class="current" value="₽">RUB</option>
+                <option class="current" value="₺">TRY</option>
+                <option class="current" value="$">MXN</option>
+                <option class="current" value="NZ$">NZD</option>
+                <option class="current" value="S$">SGD</option>
+                <option class="current" value="CHF">CHF</option>
+                <option class="current" value="SEK">SEK</option>
+                <option class="current" value="DKK">DKK</option>
+              </select>
             </div>
-        </div>
+          </div>
 
-        <div id="right-side">
+          <li class="li"><a href="../pages/login.html" class="log">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
 
-            <div id="right">
-                <h1 id="welcome">Welcome Olamilesi</h1>
-                <p id="welcome-note">Track your expenses, start your day right!</p>
-            </div>
+    <div id="right-side">
 
-            <h1 id="summary">Summary List</h1> <br>
+      <div id="right">
+        <h1 id="welcome">Welcome Olamilesi</h1>
+        <p id="welcome-note">Track your expenses, start your day right!</p>
+      </div>
 
-            <div id="button-list">
-                <button class="butto" id="today-button">Today</button>
-                <button class="butto" id="week-button">This Week</button>
-                <button class="butto" id="month-button">This Month</button>
-                <button class="butto" id="year-button">This Year</button>
-                <button class="butto" id="calender-inpu">Calendar</button>
-            
-                <!-- to create multiple shift + alt arrow down -->
-            </div>
+      <h1 id="summary">Summary List</h1> <br>
 
-            <div id="used">
-                <input type="date" class="filter-btn" id="calendar-start">
-                <input type="date" class="filter-btn" id="calendar-end">
-            </div>
+      <div id="button-lists">
+        <button class="butto" id="today-button">Today</button>
+        <button class="butto" id="week-button">This Week</button>
+        <button class="butto" id="month-button">This Month</button>
+        <button class="butto" id="year-button">This Year</button>
+        <button class="butto" id="calender-inpu">Calendar</button>
 
-            <h4 id="today"></h4>
-            <div id="summaryDiv">
+        <!-- to create multiple shift + alt arrow down -->
+      </div>
 
-            </div>
-            <div id="transaction-list">
-                <!-- Transaction list goes here -->
-             </div>
+      <div id="used">
+        <input type="date" class="filter-btn" id="calendar-start">
+        <input type="date" class="filter-btn" id="calendar-end">
+      </div>
 
-             <div id="transaction-details">
-                <span class="material-symbols-outlined arrow-lefts">arrow_left_alt</span>
-        
-            </div>
-            </div>
+      <h4 id="today"></h4>
+      <div id="summaryDiv">
 
-            
-          
-            </section>
-            <script src="../assets/js/dashboard.js"></script>
+      </div>
+
+      <div id="transaction-list">
+        <!-- Transaction list goes here -->
+      </div>
+
+      <div id="transaction-details">
+        <span class="material-symbols-outlined arrow-lefts">arrow_left_alt</span>
+      </div>
+
+    </div>
+  </section>
+  <script src="../assets/js/dashboard.js"></script>
 </body>
+
 </html>

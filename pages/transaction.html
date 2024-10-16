@@ -1,29 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
     <title>Document</title>
 </head>
+
 <body>
     <section id="main-section">
         <div id="left-side">
             <div id="left">
-                <img src="../assets/images/logo.png" alt="" id="logo">
+                <a href="../pages/dashboard.html" id="logoo"><img src="../assets/images/logo.png" alt=""
+                        id="logo" /></a>
                 <h1 id="logo-title">Trakdip</h1>
             </div>
 
             <div id="all-ul">
                 <ul id="ul1">
-                    <a href="../pages/dashboard.html" class="hul"><li class="li">Home</li></a>
-                    <a href="../pages/transaction.html" class="hul"><li class="li" id="transact">Transaction List</li></a>
-                    <a href="../pages/summary.html" class="hul"><li class="li">Summary</li></a>
-                </ul> <br> <br> <br>
+                    <a href="../pages/dashboard.html" class="hul">
+                        <li class="li">Home</li>
+                    </a>
+
+                    <a href="../pages/transaction.html" class="hul">
+                        <li class="li" id="transact">Transaction List</li>
+                    </a>
+
+                    <a href="../pages/summary.html" class="hul">
+                        <li class="li">Summary</li>
+                    </a>
+                </ul> 
+                
+                <br> <br> <br>
 
                 <ul id="ul2">
-                    <li class="li">Settings</li>
-                    <li class="li"> <a href="../pages/login.html"></a>Log Out</li>
+
+                    <li class="li" id="setting">Settings</li>
+                    
+                    <div id="settings">
+
+                        <span class="material-symbols-outlined arrow-setting">arrow_back</span>
+                        <div id="theme">
+                            <select name="" id="dark-light">
+                                <option value="dark" id="dark">Dark</option>
+                                <option value="light" id="light">Light</option>
+                            </select>
+                        </div>
+
+                        <br />
+
+                        <div id="currencies">
+                            <select name="" id="currency-selector">
+                                <option class="current" value="$">$</option>
+                                <option class="current" value="#">#</option>
+                                <option class="current" value="£">£</option>
+                                <option class="current" value="€">€</option>
+                                <option class="current" value="A$">AUD</option>
+                                <option class="current" value="C$">CAD</option>
+                                <option class="current" value="¥">JPY</option>
+                                <option class="current" value="¥">CNY</option>
+                                <option class="current" value="₹">INR</option>
+                                <option class="current" value="KSh">KES</option>
+                                <option class="current" value="R">ZAR</option>
+                                <option class="current" value="R$">BRL</option>
+                                <option class="current" value="₽">RUB</option>
+                                <option class="current" value="₺">TRY</option>
+                                <option class="current" value="$">MXN</option>
+                                <option class="current" value="NZ$">NZD</option>
+                                <option class="current" value="S$">SGD</option>
+                                <option class="current" value="CHF">CHF</option>
+                                <option class="current" value="SEK">SEK</option>
+                                <option class="current" value="DKK">DKK</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <li class="li"><a href="../pages/login.html" class="log">Log Out</a></li>
                 </ul>
             </div>
         </div>
@@ -34,27 +87,30 @@
                 <h1 id="welcome">Welcome Olamilesi</h1>
                 <p id="welcome-note">Track your expenses, start your day right!</p>
             </div>
-<!-- <br><br><br> <br> <br> <br> -->
+
 
             <div id="transaction-li">
-                <h1>Transaction List</h1> <br>
+                <h1 id="transacto">Transaction List</h1> <br>
                 <div id="use">
                     <input type="date" class="filter-btn" id="calendar-input">
                     <input type="text" class="filter-btn" id="search-input" placeholder="Search">
                 </div>
-        
-                <div id="date-totalamount">
-                    <p>Date</p>
-                    <p>total amount</p>
-                </div>
+
 
                 <div id="transaction-list">
                     <!-- Transaction list goes here -->
-                 </div>
-                 
-                 <div id="transaction-details">
+                </div>
+
+                <div id="transaction-details">
                     <span class="material-symbols-outlined arrow-lefts">arrow_left_alt</span>
-            <!-- 
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 
                     <h3 id="transaction-details-title">Expense trasaction Details</h3> <br>
             
                     <h4 id="description-title">Suya and Garri</h4>
@@ -73,12 +129,8 @@
                         <button id="edit"><span class="material-symbols-outlined">edit_square</span>Modify Expense</button>
                         <button id="delete"><span class="material-symbols-outlined">delete</span>Delete</button>
                     </div> -->
-            
-                </div>
-            </div>
 
-            </div>
-    </section>
     <script src="../assets/js/dashboard.js"></script>
 </body>
+
 </html>

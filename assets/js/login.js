@@ -107,7 +107,7 @@ function validatePassword(password) {
 
 function login(email, password) {
     // Retrieve existing users from localStorage
-    // const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
 
     // Find user with matching email and password
     const user = existingUsers.find(function(user) {
@@ -116,7 +116,7 @@ function login(email, password) {
 
     if (user) {
         // Save username to localStorage
-        // localStorage.setItem('username', user.username);
+        localStorage.setItem('username', user.username);
 
         // Redirect to the next page
         window.location.href = "/pages/dashboard.html";
